@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview – FTP Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide-react@0.292.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="flex min-h-screen">
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 flex-shrink-0 p-4 space-y-4 glass-card m-4">
+        <div class="flex items-center space-x-3 px-2">
+            <i data-lucide="network" class="text-sky-400"></i>
+            <h1 class="text-xl font-bold text-white">FTP Project</h1>
+        </div>
+        <nav class="flex flex-col space-y-2">
+            <a href="index.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="overview.html" class="nav-link active flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="book-open"></i>
+                <span>Overview</span>
+            </a>
+            <a href="configuration.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="list-checks"></i>
+                <span>Configuration</span>
+            </a>
+            <a href="demonstration.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="terminal-square"></i>
+                <span>Demonstration</span>
+            </a>
+            <a href="downloads.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="download-cloud"></i>
+                <span>Downloads</span>
+            </a>
+        </nav>
+        
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
+        <div class="glass-card p-8 space-y-8">
+            <section>
+                <h2 class="text-3xl font-bold text-white mb-4 flex items-center"><i data-lucide="file-question" class="mr-3 text-sky-400"></i>What is FTP?</h2>
+                <p class="text-slate-300 leading-relaxed">
+                    The File Transfer Protocol (FTP) is a standard network protocol used to transfer files between a client and a server on a computer network. It enables users to upload and download files over TCP/IP-based networks such as the Internet or an intranet. FTP uses separate control and data connections between the client and the server, allowing users to authenticate, manage file directories, and execute transfer commands.
+                </p>
+                <p class="mt-4 text-slate-300 leading-relaxed">
+                    In educational and lab environments like Cisco Packet Tracer, FTP simulation is crucial for understanding client-server file interactions, permission settings, and network routing.
+                </p>
+            </section>
+            <section>
+                <h2 class="text-3xl font-bold text-white mb-4 flex items-center"><i data-lucide="binary" class="mr-3 text-sky-400"></i>About the Project</h2>
+                <p class="text-slate-300 leading-relaxed">
+                    In this project, a basic FTP setup is configured across two networks (192.168.1.0 and 192.168.2.0). Using Cisco Packet Tracer, we demonstrate how users can upload and download files across these networks through a centralized FTP server. Routing Information Protocol (RIP) is used for dynamic routing between the routers to ensure devices can communicate seamlessly.
+                </p>
+                <div class="mt-6">
+                     <h3 class="text-2xl font-semibold text-white mb-4">Network Topology</h3>
+                     <img src="images/ftp_schem.png" alt="FTP Network Topology" class="w-full h-auto rounded-lg border-2 border-slate-700 shadow-lg"/>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads – FTP Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide-react@0.292.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="flex min-h-screen">
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 flex-shrink-0 p-4 space-y-4 glass-card m-4">
+        <div class="flex items-center space-x-3 px-2">
+            <i data-lucide="network" class="text-sky-400"></i>
+            <h1 class="text-xl font-bold text-white">FTP Project</h1>
+        </div>
+        <nav class="flex flex-col space-y-2">
+            <a href="index.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="overview.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="book-open"></i>
+                <span>Overview</span>
+            </a>
+            <a href="configuration.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="list-checks"></i>
+                <span>Configuration</span>
+            </a>
+            <a href="demonstration.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="terminal-square"></i>
+                <span>Demonstration</span>
+            </a>
+            <a href="downloads.html" class="nav-link active flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="download-cloud"></i>
+                <span>Downloads</span>
+            </a>
+        </nav>
+
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
+        <div class="glass-card p-8">
+             <h2 class="text-3xl font-bold text-white mb-6 flex items-center"><i data-lucide="package" class="mr-3 text-sky-400"></i>Project Files</h2>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Packet Tracer File -->
+                <a href="files/FTP_Project.pkt" download class="block p-6 bg-slate-800 hover:bg-slate-700 rounded-lg transition text-center">
+                    <i data-lucide="file-box" class="w-12 h-12 mx-auto text-sky-400 mb-4"></i>
+                    <h3 class="font-semibold text-lg text-white">Packet Tracer File</h3>
+                    <p class="text-sm text-slate-400">FTP_Project.pkt</p>
+                </a>
+                <!-- Project Report -->
+                <a href="files/FTP_Report.pdf" download class="block p-6 bg-slate-800 hover:bg-slate-700 rounded-lg transition text-center">
+                    <i data-lucide="file-text" class="w-12 h-12 mx-auto text-sky-400 mb-4"></i>
+                    <h3 class="font-semibold text-lg text-white">Project Report</h3>
+                    <p class="text-sm text-slate-400">FTP_Report.pdf</p>
+                </a>
+                <!-- Presentation -->
+                <a href="files/FTP_Presentation.pptx" download class="block p-6 bg-slate-800 hover:bg-slate-700 rounded-lg transition text-center">
+                    <i data-lucide="slideshow" class="w-12 h-12 mx-auto text-sky-400 mb-4"></i>
+                    <h3 class="font-semibold text-lg text-white">Presentation</h3>
+                    <p class="text-sm text-slate-400">FTP_Presentation.pptx</p>
+                </a>
+             </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    
+</body>
+</html>
