@@ -51,12 +51,14 @@ section h3 {
 }
 
 /* Paragraphs and Lists */
-section p, section li {
+section p,
+section li {
   line-height: 1.6;
   margin: 10px 0;
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 20px;
   margin-bottom: 15px;
 }
@@ -82,10 +84,15 @@ pre {
 img {
   max-width: 100%;
   display: block;
-  margin: 15px 0;
+  margin: 15px auto;
   border-radius: 8px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.medium-img {
+  max-width: 60%;
+  height: auto;
 }
 
 /* Links */
@@ -99,7 +106,7 @@ a:hover {
   color: #1abc9c;
 }
 
-/* File List */
+/* File Links */
 section ul li a {
   display: inline-block;
   margin-top: 5px;
@@ -135,5 +142,9 @@ footer {
 
   section h3 {
     font-size: 1.2rem;
+  }
+
+  .medium-img {
+    max-width: 100%;
   }
 }
