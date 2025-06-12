@@ -14,10 +14,19 @@
 
   <main>
     <section>
+      <h2>What is FTP?</h2>
+      <p>
+        The File Transfer Protocol (FTP) is a standard network protocol used to transfer files between a client and a server on a computer network. It enables users to upload and download files over TCP/IP-based networks such as the Internet or an intranet. FTP uses separate control and data connections between the client and the server, allowing users to authenticate, manage file directories, and execute transfer commands.
+      </p>
+      <p>
+        In educational and lab environments like Cisco Packet Tracer, FTP simulation is useful to understand client-server file interactions, permission settings, and routing.
+      </p>
+    </section>
+
+    <section>
       <h2>About the Project</h2>
       <p>
-        In this project, a basic FTP connection is established between two different networks (192.168.1.0 & 192.168.2.0).
-        The FTP server is configured to work from any device in either network.
+        In this project, a basic FTP setup is configured across two networks (192.168.1.0 and 192.168.2.0). Using Cisco Packet Tracer, we demonstrate how users can upload and download files across networks through an FTP server. Routing Information Protocol (RIP) is used for dynamic routing between the routers to ensure devices can communicate seamlessly.
       </p>
     </section>
 
@@ -25,61 +34,55 @@
       <h2>Steps to Configure FTP</h2>
       <ol>
         <li>Create two networks: 192.168.1.0 and 192.168.2.0 (Class C)</li>
-        <li>Attach all required networking devices</li>
-        <li>Assign IP addresses, subnet masks, and default gateways</li>
-        <li>Implement dynamic routing using RIP on all routers</li>
-        <li>Configure the FTP server with usernames, passwords, and permissions (read, write, delete, rename, list)</li>
+        <li>Connect networking devices such as routers, switches, and PCs</li>
+        <li>Assign IP addresses, subnet masks, and gateways</li>
+        <li>Enable RIP on routers for inter-network communication</li>
+        <li>Set up FTP server with user credentials and permissions (read, write, delete, rename, list)</li>
       </ol>
     </section>
 
     <section>
       <h2>Routing Configuration (RIP)</h2>
-      <p>
-        Configure RIP on each router:
-        <ul>
-          <li>Router1: 192.168.1.0, 10.0.0.0, 11.0.0.0</li>
-          <li>Router2: 100.0.0.0, 12.0.0.0, 11.0.0.0</li>
-          <li>Router3: 192.168.2.0, 12.0.0.0, 11.0.0.0</li>
-        </ul>
-      </p>
+      <p>Configure RIP as follows:</p>
+      <ul>
+        <li><strong>Router1:</strong> 192.168.1.0, 10.0.0.0, 11.0.0.0</li>
+        <li><strong>Router2:</strong> 100.0.0.0, 12.0.0.0, 11.0.0.0</li>
+        <li><strong>Router3:</strong> 192.168.2.0, 12.0.0.0, 11.0.0.0</li>
+      </ul>
     </section>
 
     <section>
       <h2>FTP Commands</h2>
       <ul>
-        <li><code>dir</code> – List files in directory</li>
         <li><code>ftp [IP]</code> – Connect to FTP server</li>
-        <li><code>put file.txt</code> – Upload file to server</li>
-        <li><code>get file.txt</code> – Download file from server</li>
+        <li><code>dir</code> – List available files on the server</li>
+        <li><code>put filename</code> – Upload a file to the server</li>
+        <li><code>get filename</code> – Download a file from the server</li>
       </ul>
     </section>
+
     <section class="gallery">
-    <img src="images/ftp_schem.png" alt="ftp_schem" />
-    
-  </section>
-    
-   <section>
-  <h2>File Transfer Demonstration</h2>
+      <h2>Network Topology</h2>
+      <img src="images/ftp_schem.png" alt="FTP Network Topology" class="medium-img"/>
+    </section>
 
-  <h3>1. Uploading File to Server (Using <code>put</code>)</h3>
-  <p>
-    PC2 uploads <strong>Test1.txt</strong> to the FTP server using:
-  </p>
-  <pre><code>put cn_prj.txt</code></pre>
-  <p>The file is then available on the server for other devices.</p>
-  <img src="images/pc2.png" alt="PC2 Uploading" class="medium-img" width="500" height="600" />
+    <section>
+      <h2>File Transfer Demonstration</h2>
 
-  <h3>2. Downloading File from Server (Using <code>get</code>)</h3>
-  <p>
-    PC4 downloads <strong>Test1.txt</strong> using:
-  </p>
-  <pre><code>get Test1.txt</code></pre>
-  <p>The file is successfully saved to PC5 from the FTP server.</p>
-  <img src="images/pc4.png" alt="PC4 Downloading" class="medium-img" width="500" height="600" />
-</section>
+      <h3>1. Uploading File to Server (Using <code>put</code>)</h3>
+      <p>
+        PC2 uploads <strong>cn_prj.txt</strong> to the FTP server using:
+      </p>
+      <pre><code>put cn_prj.txt</code></pre>
+      <img src="images/pc2.png" alt="PC2 Uploading" class="medium-img" />
 
-
-    
+      <h3>2. Downloading File from Server (Using <code>get</code>)</h3>
+      <p>
+        PC4 downloads <strong>Test1.txt</strong> using:
+      </p>
+      <pre><code>get Test1.txt</code></pre>
+      <img src="images/pc4.png" alt="PC4 Downloading" class="medium-img" />
+    </section>
 
     <section>
       <h2>Project Files</h2>
@@ -89,8 +92,6 @@
         <li><a href="files/FTP_Presentation.pptx" download>Download Project Presentation (PPTX)</a></li>
       </ul>
     </section>
-
-
   </main>
 
   <footer>
