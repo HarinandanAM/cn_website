@@ -1,108 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FTP Configuration Project – Cisco Packet Tracer</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTP Configuration Project – Cisco Packet Tracer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide-react@0.292.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>FTP File Transfer Protocol Configuration Project</h1>
-    <p>This project demonstrates FTP configuration between two networks using Cisco Packet Tracer.</p>
-  </header>
+<body class="flex min-h-screen">
 
-  <main>
-    <section>
-      <h2>What is FTP?</h2>
-      <p>
-        The File Transfer Protocol (FTP) is a standard network protocol used to transfer files between a client and a server on a computer network. It enables users to upload and download files over TCP/IP-based networks such as the Internet or an intranet. FTP uses separate control and data connections between the client and the server, allowing users to authenticate, manage file directories, and execute transfer commands.
-      </p>
-      <p>
-        In educational and lab environments like Cisco Packet Tracer, FTP simulation is useful to understand client-server file interactions, permission settings, and routing.
-      </p>
-    </section>
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 flex-shrink-0 p-4 space-y-4 glass-card m-4">
+        <div class="flex items-center space-x-3 px-2">
+            <i data-lucide="network" class="text-sky-400"></i>
+            <h1 class="text-xl font-bold text-white">FTP Project</h1>
+        </div>
+        <nav class="flex flex-col space-y-2">
+            <a href="index.html" class="nav-link active flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="overview.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="book-open"></i>
+                <span>Overview</span>
+            </a>
+            <a href="configuration.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="list-checks"></i>
+                <span>Configuration</span>
+            </a>
+            <a href="demonstration.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="terminal-square"></i>
+                <span>Demonstration</span>
+            </a>
+            <a href="downloads.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+                <i data-lucide="download-cloud"></i>
+                <span>Downloads</span>
+            </a>
+        </nav>
+        <div class="!mt-auto p-2 text-center text-xs text-slate-400">
+            <p>© 2025 | Harinandan AM, Nandakumar Govind, Pavithra K, Samuel Sebastian, Sreerag C R </p>
+            <a href="https://github.com/HarinandanAM/cn_website" target="_blank" class="hover:text-sky-400 transition">GitHub Repo</a>
+        </div>
+    </aside>
 
-    <section>
-      <h2>About the Project</h2>
-      <p>
-        In this project, a basic FTP setup is configured across two networks (192.168.1.0 and 192.168.2.0). Using Cisco Packet Tracer, we demonstrate how users can upload and download files across networks through an FTP server. Routing Information Protocol (RIP) is used for dynamic routing between the routers to ensure devices can communicate seamlessly.
-      </p>
-    </section>
+    <!-- Main Content Area -->
+    <main class="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
+        <div class="h-full flex flex-col items-center justify-center text-center">
+            <div class="glass-card p-12 max-w-2xl">
+                <i data-lucide="server-cog" class="w-24 h-24 mx-auto text-sky-400 mb-6"></i>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">FTP Configuration Project</h2>
+                <p class="text-lg md:text-xl text-slate-300">
+                    Demonstrating File Transfer Protocol setup and routing between two networks using Cisco Packet Tracer.
+                </p>
+                <a href="overview.html" class="mt-8 bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center mx-auto space-x-2">
+                    <span>Get Started</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+    </main>
 
-    <section>
-      <h2>Steps to Configure FTP</h2>
-      <ol>
-        <li>Create two networks: 192.168.1.0 and 192.168.2.0 (Class C)</li>
-        <li>Connect networking devices such as routers, switches, and PCs</li>
-        <li>Assign IP addresses, subnet masks, and gateways</li>
-        <li>Enable RIP on routers for inter-network communication</li>
-        <li>Set up FTP server with user credentials and permissions (read, write, delete, rename, list)</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Routing Configuration (RIP)</h2>
-      <p>Configure RIP as follows:</p>
-      <ul>
-        <li><strong>Router1:</strong> 192.168.1.0, 10.0.0.0, 11.0.0.0</li>
-        <li><strong>Router2:</strong> 100.0.0.0, 12.0.0.0, 11.0.0.0</li>
-        <li><strong>Router3:</strong> 192.168.2.0, 12.0.0.0, 11.0.0.0</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>FTP Commands</h2>
-      <ul>
-        <li><code>ftp [IP]</code> – Connect to FTP server</li>
-        <li><code>dir</code> – List available files on the server</li>
-        <li><code>put filename</code> – Upload a file to the server</li>
-        <li><code>get filename</code> – Download a file from the server</li>
-      </ul>
-    </section>
-
-    <section class="gallery">
-      <h2>Network Topology</h2>
-      <img src="images/ftp_schem.png" alt="FTP Network Topology" class="medium-img"/>
-    </section>
-
-    <section>
-      <h2>File Transfer Demonstration</h2>
-
-      <h3>1. Uploading File to Server (Using <code>put</code>)</h3>
-      <p>
-        PC2 uploads <strong>cn_prj.txt</strong> to the FTP server using:
-      </p>
-      <pre><code>put cn_prj.txt</code></pre>
-      <img src="images/pc2.png" alt="PC2 Uploading" class="medium-img" />
-
-      <h3>2. FTP Server User Configuration</h3>
-      <p>
-          The FTP server is configured with multiple user accounts, each with different permission levels such as Read, Write, Delete, Rename, and List. The server allows secure access to files using specific usernames and passwords.
-      </p>
-     <img src="images/server_op.png" alt="FTP Server User Configuration" class="medium-img" />
-
-
-      <h3>3. Downloading File from Server (Using <code>get</code>)</h3>
-      <p>
-        PC4 downloads <strong>Test1.txt</strong> using:
-      </p>
-      <pre><code>get Test1.txt</code></pre>
-      <img src="images/pc4.png" alt="PC4 Downloading" class="medium-img" />
-    </section>
-
-    <section>
-      <h2>Project Files</h2>
-      <ul>
-        <li><a href="files/FTP_Project.pkt" download>Download Cisco Packet Tracer File</a></li>
-        <li><a href="files/FTP_Report.pdf" download>Download Project Report (PDF)</a></li>
-        <li><a href="files/FTP_Presentation.pptx" download>Download Project Presentation (PPTX)</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 FTP Project | <a href="https://github.com/HarinandanAM/cn_website" target="_blank">GitHub Repo</a></p>
-  </footer>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
