@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment: Pavithra K – FTP Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide-react@0.292.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body class="flex min-h-screen">
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 flex-shrink-0 p-4 space-y-4 glass-card m-4">
+        <div class="flex items-center space-x-3 px-2">
+            <i data-lucide="network" class="text-sky-400"></i>
+            <h1 class="text-xl font-bold text-white">FTP Project</h1>
+        </div>
+        <nav class="flex flex-col space-y-2">
+            <a href="index.html" class="nav-link flex items-center space-x-3 p-3">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="overview.html" class="nav-link flex items-center space-x-3 p-3">
+                <i data-lucide="book-open"></i>
+                <span>Overview</span>
+            </a>
+            <a href="configuration.html" class="nav-link flex items-center space-x-3 p-3">
+                <i data-lucide="list-checks"></i>
+                <span>Configuration</span>
+            </a>
+            <a href="demonstration.html" class="nav-link flex items-center space-x-3 p-3">
+                <i data-lucide="terminal-square"></i>
+                <span>Demonstration</span>
+            </a>
+            <a href="downloads.html" class="nav-link flex items-center space-x-3 p-3">
+                <i data-lucide="download-cloud"></i>
+                <span>Downloads</span>
+            </a>
+            <a href="assignments.html" class="nav-link active flex items-center space-x-3 p-3">
+                <i data-lucide="book-marked"></i>
+                <span>Assignments</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
+        <div class="glass-card p-8">
+             <h2 class="text-3xl font-bold text-white mb-6 flex items-center"><i data-lucide="file-text" class="mr-3 text-sky-400"></i>Assignment by Pavithra K</h2>
+             <div class="space-y-4">
+                <p class="text-slate-300">This section contains the assignment files submitted by Pavithra K.</p>
+                <!-- Download Links -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <a href="pdf/CN_assignment_22036.pdf" download class="material-button">
+                        <i data-lucide="file-text"></i>
+                        <span>Download Report (PDF)</span>
+                    </a>
+                    <a href="cn_asssignment_22036.zip" download class="material-button">
+                        <i data-lucide="file-zip"></i>
+                        <span>Download Packet Tracer (.zip)</span>
+                    </a>
+                </div>
+             </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
